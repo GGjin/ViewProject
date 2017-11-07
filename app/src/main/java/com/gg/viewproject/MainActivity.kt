@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
      */
     external fun stringFromJNI(): String
 
+    external fun printLine():String
+
     companion object {
 
         // Used to load the 'native-lib' library on application startup.
