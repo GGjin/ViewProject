@@ -1,4 +1,4 @@
-package com.gg.viewproject
+package com.gg.viewproject.view
 
 import android.content.Context
 import android.graphics.Canvas
@@ -9,6 +9,7 @@ import android.util.AttributeSet
 import android.util.Log
 import android.util.TypedValue
 import android.widget.LinearLayout
+import com.gg.viewproject.R
 
 /**
  *  Creator : GG
@@ -35,8 +36,11 @@ class MyTextView : LinearLayout {
 
         mPaint = Paint()
 
+        //添加抗锯齿
         mPaint.isAntiAlias = true
+        //设置画笔绘制文字的size
         mPaint.textSize = mTextSize.toFloat()
+        //设置画笔的颜色
         mPaint.color = mTextColor
 
 //        //设置默认背景
@@ -59,6 +63,7 @@ class MyTextView : LinearLayout {
 
         var width = MeasureSpec.getSize(widthMeasureSpec)
         var bound = Rect()
+        //通过bound获取绘制的文字的宽高
         mPaint.getTextBounds(mText, 0, mText.length, bound)
         if (widthMode == MeasureSpec.AT_MOST) {
 
@@ -75,14 +80,15 @@ class MyTextView : LinearLayout {
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
-        var fontMetricsInt = mPaint.fontMetricsInt
+        val fontMetricsInt = mPaint.fontMetricsInt
         Log.d("top", "------   " + fontMetricsInt.top)
         Log.d("bottom", "------   " + fontMetricsInt.bottom)
         Log.d("ascent", "------   " + fontMetricsInt.ascent)
         Log.d("descent", "------   " + fontMetricsInt.descent)
         Log.d("leading", "------   " + fontMetricsInt.leading)
 
-        var baseLine = height / 2 + (fontMetricsInt.bottom - fontMetricsInt.top) / 2 - fontMetricsInt.bottom
+        //计算绘制文字需要的基线
+        val baseLine = measuredHeight / 2 + (fontMetricsInt.bottom - fontMetricsInt.top) / 2 - fontMetricsInt.bottom
 
         canvas?.drawText(mText, paddingLeft.toFloat(), baseLine.toFloat(), mPaint)
     }
