@@ -1,4 +1,4 @@
-package com.gg.viewproject.view
+package com.gg.viewproject.mytext
 
 import android.content.Context
 import android.graphics.Canvas

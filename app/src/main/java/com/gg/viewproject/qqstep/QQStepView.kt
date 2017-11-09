@@ -1,10 +1,9 @@
-package com.gg.viewproject.view
+package com.gg.viewproject.qqstep
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
-import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import com.gg.viewproject.R
@@ -123,7 +122,7 @@ class QQStepView : View {
             return
         }
         val sweepAngle = mCurrentStep / mMaxStep.toFloat() * 270
-        Log.d("sweepAngle ------- ", "   ------   " + sweepAngle)
+//        Log.d("sweepAngle ------- ", "   ------   " + sweepAngle)
         canvas?.drawArc(mRectF, 135f, sweepAngle, false, mInnerPaint)
         //3 中间的字
         val str = mCurrentStep.toString()

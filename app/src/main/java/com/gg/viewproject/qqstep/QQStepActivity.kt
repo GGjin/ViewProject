@@ -1,4 +1,4 @@
-package com.gg.viewproject.activity
+package com.gg.viewproject.qqstep
 
 import android.animation.ObjectAnimator
 import android.os.Bundle

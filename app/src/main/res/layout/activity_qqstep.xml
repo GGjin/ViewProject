@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.QQStepActivity">
+    tools:context=".qqstep.QQStepActivity">
 
-    <com.gg.viewproject.view.QQStepView
+    <com.gg.viewproject.qqstep.QQStepView
         android:id="@+id/qqStepView"
         android:layout_width="400dp"
         android:layout_height="300dp"

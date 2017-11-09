@@ -7,14 +7,18 @@
         <attr name="textColor" format="color|reference"/>
     </declare-styleable>
 
-    
+
     <declare-styleable name="QQStepView">
         <attr name="outerColor" format="color"/>
         <attr name="innerColor" format="color"/>
         <attr name="stepTextColor" format="color"/>
         <attr name="borderWidth" format="dimension"/>
         <attr name="stepTextSize" format="dimension"/>
+    </declare-styleable>
 
+    <declare-styleable name="ColorTrackTextView">
+        <attr name="originalColor" format="color"/>
+        <attr name="changeColor" format="color"/>
     </declare-styleable>
 
 </resources>

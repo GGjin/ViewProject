@@ -17,8 +17,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.QQStepActivity"
+            android:name=".qqstep.QQStepActivity"
             android:label="@string/title_activity_qqstep"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".colortracktext.ColorTrackTextActivity"
+            android:label="@string/title_activity_colortracktext"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
